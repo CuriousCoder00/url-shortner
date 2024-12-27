@@ -1,5 +1,4 @@
 import React from "react";
-import { ChevronRight } from "lucide-react";
 import UrlInput from "./url-input";
 
 export default function Home() {

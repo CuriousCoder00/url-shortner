@@ -14,7 +14,7 @@ const RedirectUrl = () => {
       }
     };
     fetchUrl();
-  }, []);
+  }, [shortenedUrl]);
   return <div>Redirecting...</div>;
 };
 
