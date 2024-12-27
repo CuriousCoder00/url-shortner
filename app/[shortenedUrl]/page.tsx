@@ -9,6 +9,10 @@ const RedirectUrl = () => {
     const fetchUrl = async () => {
       const res = await redirectUrl({ shortenedUrl: shortenedUrl as string });
       if ("longUrl" in res) {
+        if (res.longUrl.startsWith("http") || res.longUrl.startsWith("https")) {
+          window.location.replace(res.longUrl);
+          return;
+        }
         window.location.replace("https://" + res.longUrl);
         return;
       }
